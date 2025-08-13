@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 const Testimonial = ({ 
   title = "What Our Members Say",
@@ -48,11 +48,11 @@ const Testimonial = ({
 
   const testimonialsData = testimonials.length > 0 ? testimonials : defaultTestimonials;
 
-  const nextTestimonial = () => {
+  const nextTestimonial = useCallback(() => {
     setCurrentIndex((prevIndex) => 
       prevIndex === testimonialsData.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [testimonialsData.length]);
 
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) => 
@@ -65,12 +65,12 @@ const Testimonial = ({
   };
 
   // Auto play functionality
-  React.useEffect(() => {
+  useEffect(() => {
     if (autoPlay) {
       const interval = setInterval(nextTestimonial, autoPlayInterval);
       return () => clearInterval(interval);
     }
-  }, [autoPlay, autoPlayInterval, currentIndex]);
+  }, [autoPlay, autoPlayInterval, nextTestimonial]);
 
   const renderStars = (rating) => {
     return [...Array(5)].map((_, index) => (
@@ -130,7 +130,7 @@ const Testimonial = ({
                 className="text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] leading-relaxed mb-[2rem] font-light italic max-w-3xl"
                 style={{ color: textColor }}
               >
-                "{testimonialsData[currentIndex]?.quote}"
+                &ldquo;{testimonialsData[currentIndex]?.quote}&rdquo;
               </blockquote>
 
               {/* Name and Role */}

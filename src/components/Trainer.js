@@ -14,7 +14,7 @@ const trainers = [
   {
     name: 'Sarah Johnson',
     desc: 
-      'Endurance is not just physical, it\'s mental strength.',
+      'Endurance is not just physical, it&apos;s mental strength.',
     img: '/images/trainer-2.svg',
     socials: [
       { icon: '/images/instagram.svg', url: '#' },

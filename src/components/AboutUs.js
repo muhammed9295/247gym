@@ -30,7 +30,7 @@ export default function AboutUs() {
             {/* Row 2 */}
             <div className="mb-8">
               <p className="text-white font-light text-base sm:text-lg md:text-[1.125rem] leading-relaxed">
-                Our mission is to create a welcoming space where everyone, regardless of their fitness level, can thrive. Whether you're a beginner or an experienced athlete, we provide the tools, expertise, and community to support your journey. With state-of-the-art equipment, personalized coaching, and a variety of classes, we help you become the best version of yourself.
+                Our mission is to create a welcoming space where everyone, regardless of their fitness level, can thrive. Whether you&apos;re a beginner or an experienced athlete, we provide the tools, expertise, and community to support your journey. With state-of-the-art equipment, personalized coaching, and a variety of classes, we help you become the best version of yourself.
               </p>
             </div>
             
@@ -92,7 +92,7 @@ export default function AboutUs() {
                   Diverse Classes
                 </h3>
                 <p className="text-white font-light text-sm sm:text-base md:text-[1rem]">
-                  From strength training to yoga, there's something for everyone.
+                  From strength training to yoga, there&apos;s something for everyone.
                 </p>
               </div>
             </div>

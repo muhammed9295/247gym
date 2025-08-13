@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer({
   brand = { highlight: '247', rest: 'gym' },
   logoSrc = '/images/logo.svg',
@@ -73,7 +75,7 @@ export default function Footer({
           <section aria-labelledby="footer-brand" className="max-w-xl">
             <h2 id="footer-brand" className="sr-only">About {brand?.highlight}{brand?.rest}</h2>
             <div className="mb-[1.25rem]">
-              <a href="/" aria-label={`${brand?.highlight}${brand?.rest} home`} className="inline-flex items-center gap-[0.5rem]">
+              <Link href="/" aria-label={`${brand?.highlight}${brand?.rest} home`} className="inline-flex items-center gap-[0.5rem]">
                 {logoSrc ? (
                   <img
                     src={logoSrc}
@@ -86,7 +88,7 @@ export default function Footer({
                     <span className="text-[1.75rem] font-semibold" style={{ color: textColor }}>{brand?.rest}</span>
                   </>
                 )}
-              </a>
+              </Link>
             </div>
             <p className="text-[1rem] leading-relaxed" style={{ color: mutedTextColor }}>
               {description}
@@ -97,9 +99,9 @@ export default function Footer({
               <ul className="flex items-center gap-[1.25rem]">
                 {socials.map((s) => (
                   <li key={s.name}>
-                    <a href={s.href} aria-label={s.name} className="inline-flex items-center justify-center">
+                    <Link href={s.href} aria-label={s.name} className="inline-flex items-center justify-center">
                       {renderIcon(s.icon)}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -118,9 +120,9 @@ export default function Footer({
                     <ul key={idx} className="space-y-[0.75rem]">
                       {col.map((link) => (
                         <li key={link.label}>
-                          <a href={link.href} className="text-[0.95rem] hover:opacity-100 transition-opacity" style={{ color: mutedTextColor }}>
+                          <Link href={link.href} className="text-[0.95rem] hover:opacity-100 transition-opacity" style={{ color: mutedTextColor }}>
                             {link.label}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
