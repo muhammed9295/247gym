@@ -1,0 +1,6 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="300" height="300" fill="#DC2626"/>
+<circle cx="150" cy="120" r="40" fill="#991B1B"/>
+<path d="M90 220c0-33.137 26.863-60 60-60s60 26.863 60 60v20H90v-20z" fill="#991B1B"/>
+<text x="150" y="280" text-anchor="middle" fill="#FEE2E2" font-family="Arial" font-size="14">John Lee</text>
+</svg>

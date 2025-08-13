@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* Dynamic spacing system using rem units */
+  --container-padding: clamp(1rem, 4vw, 6.25rem); /* 16px to 100px */
+  --container-padding-large: clamp(1rem, 6vw, 9.375rem); /* 16px to 150px */
+  --container-padding-xl: clamp(1rem, 8vw, 12.5rem); /* 16px to 200px */
+  
+  /* Section spacing */
+  --section-padding-y: clamp(2rem, 8vw, 6rem); /* 32px to 96px */
+  --section-padding-y-large: clamp(3rem, 10vw, 8rem); /* 48px to 128px */
+  
+  /* Container max-widths */
+  --container-max-width: 80rem; /* 1280px */
+  --container-max-width-large: 90rem; /* 1440px */
+  --container-max-width-xl: 100rem; /* 1600px */
+  
+  /* Grid gaps */
+  --grid-gap: clamp(1rem, 3vw, 2rem); /* 16px to 32px */
+  --grid-gap-large: clamp(1.5rem, 4vw, 3rem); /* 24px to 48px */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+/* Utility classes for consistent spacing */
+.container-padding {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.container-padding-large {
+  padding-left: var(--container-padding-large);
+  padding-right: var(--container-padding-large);
+}
+
+.container-padding-xl {
+  padding-left: var(--container-padding-xl);
+  padding-right: var(--container-padding-xl);
+}
+
+.container-max-width {
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-max-width-large {
+  max-width: var(--container-max-width-large);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-max-width-xl {
+  max-width: var(--container-max-width-xl);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section utilities */
+.section-padding {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+}
+
+.section-padding-large {
+  padding-top: var(--section-padding-y-large);
+  padding-bottom: var(--section-padding-y-large);
+}
+
+/* Grid utilities */
+.grid-gap {
+  gap: var(--grid-gap);
+}
+
+.grid-gap-large {
+  gap: var(--grid-gap-large);
+}
+
+/* Responsive container */
+.responsive-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.responsive-container-large {
+  width: 100%;
+  max-width: var(--container-max-width-large);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding-large);
+  padding-right: var(--container-padding-large);
+}
